@@ -1,0 +1,41 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+code {
+  color: #eb5757 !important;
+  background: rgba(135, 131, 120, 0.15) !important;
+  border-radius: 5px;
+}
+
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+
+.callout {
+  padding: 1rem;
+}
+
+.warning-icon {
+  margin-top: -10px
+}
+
+blockquote {
+  opacity: 1 !important;
+  border-left: 3px solid rgb(55, 53, 47) !important;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  max-width: 1100px !important;
+}

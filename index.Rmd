@@ -1,0 +1,17 @@
+--- 
+title: "Documentación interna CIT"
+author: "Equipo de Investigación (?)"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "Piloto de documentación con Bookdown"
+---
+
+# Prefacio {-}
+
+En este libro iremos añadiendo la documentación de distintas cosas. Por el momento partiremos con tutoriales para el uso del controlador de versiones **git** en conjunto con **GitHub**.

@@ -35,5 +35,8 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 
+_book/*
+
 # R Environment Variables
 .Renviron
+_bookdown_files/bookdown-demo_files/figure-html/nice-fig-1.png
