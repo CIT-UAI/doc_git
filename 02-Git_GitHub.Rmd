@@ -1,0 +1,129 @@
+# Configuración de repositorios
+## Crear repositorio
+Podemos hacer repositorio de dos formas distintas.
+
+### Página web de GitHub
+1. Primero iniciamos sesión en [GitHub](http://github.com)      ![](01-Git_GitHub/Untitled.png)
+2. Hacemos click en `Create repository`. Luego como `owner` seleccionamos la organización CIT-UAI
+![](01-Git_GitHub/Untitled%201.png)
+Luego le damos a `Create repository`
+3. Ahora ya tenemos el repositorio creado en GitHub
+![](01-Git_GitHub/Untitled%202.png)
+Ahora ya podemos [hacer un Fork](#crear_fork)
+</details>
+
+### GitHub Desktop
+1. Luego de iniciar sesión el la aplicación, en el menú ponemos `File > New repository...`
+![](01-Git_GitHub/Untitled%203.png)
+2. Rellenamos la información del repositorio nuevo
+![](01-Git_GitHub/Untitled%204.png)
+3. Hacemos click en `Create repository` para crear el repositorio de forma local
+4. Luego la aplicación nos muestra lo siguiente. Hacemos click en `Publish repository` para subir el repositorio a GitHub
+![](01-Git_GitHub/Untitled%205.png)
+5. Nos aseguramos que seleccionar `CIT-UAI` en `Organization` . 
+![](01-Git_GitHub/Untitled%206.png)
+6. Hacemos click en `Publish repository` para confirmar. Con esto subimos el repositorio que acabamos de crear localmente, al perfil de la organización `CIT-UAI`
+7. La aplicación ahora se ve como acontinuación
+![](01-Git_GitHub/Untitled%207.png)
+Si en el menú nos vamos a `Repository > View on GitHub` , veremos      ![](01-Git_GitHub/Untitled%208.png)
+Ahora estamos listos para [hacer un Fork](#crear_fork)
+</details>
+      
+## Crear un Fork {#crear_fork}
+
+1. Nos vamos a la página de GitHub del repositorio al que queremos hacerle el `Fork` . Hacemos click en el botón que dice `Fork` en la esquina superior derecha. 
+    ![](01-Git_GitHub/Untitled%209.png)
+2. Seleccionamos nuestra cuenta de GitHub
+    ![](01-Git_GitHub/Untitled%2010.png)
+3. Ahora, en la parte superior izquierda vemos que el repositorio ahora se encuentra en nuestro perfil, y que es un fork del repositorio del mismo nombre, pero del perfil `CIT-UAI` 
+    
+    ![](01-Git_GitHub/Untitled%2011.png)
+    
+4. Ahora volvamos a la aplicación GitHub Desktop. En el menú nos iremos a `File > Clone repository...` 
+    
+    ![Untitled](01-Git_GitHub/Untitled%2012.png)
+    
+5. En el menú que se nos abre, refrescamos la lista de repositorios
+    
+    ![Untitled](01-Git_GitHub/Untitled%2013.png)
+    
+6. Vemos como aparece el repositorio al que le hicimos `Fork`
+    
+    ![Untitled](01-Git_GitHub/Untitled%2014.png)
+    
+7. Lo seleccionamos y le damos click a `Clone`.
+
+    <figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex">
+    <div style="width:100%">
+    Es posible que de un problema con la carpeta de destino. Esto ocurrirá **si anteriormente se creó el repositorio para el perfil de la organización** (el repositorio del perfil UAI-CIT) **desde el mismo computador que estás ocupando ahora**.
+![](01-Git_GitHub/Untitled%2014.png)
+Esto lo podemos solucionar de dos formas sencillas
+<details>
+  <summary>Solución 1</summary>
+    
+    La primera forma es corrigiendo el nombre de la carpeta de destino. Sugerimos añadir <code>_fork</code> al nombre de la carpeta de destino.
+    AA
+    Con esto la franja mostrando el error desaparece, y podemos hacer click en <code>Clone</code> sin problemas, y podemos continuar.
+    BB
+    <details><summary><em>Observación</em></summary>
+    <a href="https://www.notion.so/Crear-un-Fork-8589ea8daafd4967aab3473a3cafea1c">Luego de terminar de hacer el Fork</a> en la lista de repositorios veremos los repositorios que se llaman igual, pero indicando a que perfil de GitHub es cada uno.
+    Por otro lado en el visor de archivos veremos dos carpetas
+    CC
+    Acá <code>repositorio1</code> es la copia local del repositorio del perfil CIT-UAI, mientras que <code>repositorio_fork</code> es la copia local del repositorio del perfil personal.
+</details>
+    <p id="227564d5-356d-4478-8e4e-f5a126448533" class=""></p>
+    </details>
+    </div>
+    </figure>
+
+      
+8. Nos aparecerá la siguiente ventana, donde podemos escoger entre dos opciones. {#terminar_fork} 
+    
+    ![Untitled](01-Git_GitHub/Untitled%2023.png)
+    
+    La opción `To contribute to the parent project` es ideal si el repositorio tiene (o tendrá) códigos que tú y tu equipo van a **desarrollar**. 
+    
+    ***Ejemplo***
+    
+    > Tu y tu equipo van a **desarrollar distintos códigos para el cálculo de algún indicador**. En este repositorio aún se están probando **mejoras** al cálculo, **optimizaciones**, o **características**.
+    > 
+    
+    Por otro lado, la opción `For my own purposes` es ideal para **solo usar el código** (posiblemente desarrollado por otro equipo), al que le harás muy pocas modificaciones, solo para usarlo.
+    
+    ***Ejemplo***
+    
+    > Tú y tu equipo solo quieren **correr el cálculo de algún indicador**, para alguna región en particular, por ejemplo, con la **última version estable del código** del cálculo (posiblemente desarrollada por otro equipo). En un principio, solo pretenden hacer **pequeñas modificaciones** en el código solo para usarlo, como por ejemplo **ajustar las rutas de los insumos** que van a utilizar.
+    > 
+    
+    <aside>
+    💡 Es importante mencionar que, sea cual sea la opción que escojamos, esta **si se puede cambiar después**, en la configuración del repositorio**.**
+    
+    </aside>
+    
+    Escogemos la opción más adecuada y hacemos click en `Continue`
+    
+
+1. Con esto ya tenemos nuestro nuestro `Fork` del repositorio listo para usar. 
+
+## Clonación de Repositorios
+
+- **R Studio**
+    1. En RStudio creamos un nuevo proyecto, y seleccionamos `Version Control`
+        
+        ![Untitled](01-Git_GitHub/Untitled%2024.png)
+        
+    2. Seleccionamos  `Git`
+        
+        ![Untitled](01-Git_GitHub/Untitled%2025.png)
+        
+    3. En `Reository URL` ponemos la URL del repositorio en GitHub. En `Project direcory name` podemos ponerle un nombre a la carpeta en que se descargara (clonará) el repositorio. Por ultimo en `Create project as subdirectory of` se puede especificar la ruta en donde que queremos  se guarde la carpeta de este nuevo repositorio.
+        
+        ![Untitled](01-Git_GitHub/Untitled%2026.png)
+        
+        Para finalizar hacemos click en `Create Project`
+        
+- **GitHub Desktop**
+    
+    ![Untitled](01-Git_GitHub/Untitled%2027.png)
+    
+    Luego de iniciar sesión en GitHub Desktop, podemos clonar fácilmente los repositorios de nuestro perfil y de la organización

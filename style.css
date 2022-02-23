@@ -12,3 +12,11 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+code {
+  color: #eb5757 !important;
+}
+
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
