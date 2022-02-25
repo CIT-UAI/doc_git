@@ -1,0 +1,15 @@
+## Uso Básico
+
+En esta sección veremos el uso basico de `Git` usando la aplicación `GitHub Desktop`. Se asumirá que ya tienes un repositorio clonado de manera local en tu computador ([Ver sección anterior](#repos_config) )
+
+Se verán los conceptos de
+
+* commit
+* branch
+* push
+
+### Registrar cambios en el repositorio (Commits)
+Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta manera.
+![Plot title. ](01.2-Git-uso-básico_insertimage_2.png)
+con un signo
+<span style="color:green" class="boxed">**+**</span>
