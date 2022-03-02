@@ -12,4 +12,6 @@ Se verán los conceptos de
 Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta manera.
 ![Plot title. ](01.2-Git-uso-básico_insertimage_2.png)
 con un signo
-<span style="color:green" class="boxed">**+**</span>
+<span style="color:green" class="boxed">**[+]**</span>
+veremos los 
+<span style="color:gold" class="boxed">**[•]**</span>
