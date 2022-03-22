@@ -8,10 +8,30 @@ Se verán los conceptos de
 * branch
 * push
 
-### Registrar cambios en el repositorio (Commits)
+### Ver y reconocer cambios en el repositorio
 Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta manera.
 ![Plot title. ](01.2-Git-uso-básico_insertimage_2.png)
 con un signo
 <span style="color:green" class="boxed">**[+]**</span>
 veremos los 
 <span style="color:gold" class="boxed">**[•]**</span>
+=======
+![Plot title. ](01.2-Git-uso-básico_insertimage_3.png)
+<p> El signo
+<span style="color:green" class="boxed">**[+]**</span> significa que el archivo es nuevo, mientras que el signo <span style="color:#EEBC1D"  class="boxed">**[•]**</span> significa que el archivo ya existía, pero que ha sido modificado.
+Por último, <span style="color:red">**[–]**</span> indica que un archivo ha sido borrado.</p>
+
+### Crear registro (commit) 
+
+Para crear un `commit`, seleccionamos en la barra lateral de la izquierda, que cambios queremos registrar. Luego nos vamos a la parte inferior donde tendremos que ponerle un nombre al commit, y opcionalmente una descripción. 
+
+![](01.2-Git-uso-básico_insertimage_7.png)
+
+
+Para finalizar hacemos click en el botón azul <code>Commit to **main** </code>
+
+<figure class=" block-color-gray_background callout">
+<div>
+En el botón azul, el nombre de la rama ( en este caso <code>**main**</code>), puede cambiar según la rama en que estemos.
+</div>
+</figure>
