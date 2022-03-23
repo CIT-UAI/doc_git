@@ -8,20 +8,18 @@ Se verán los conceptos de
 * branch
 * push
 
-### Ver y reconocer cambios en el repositorio
+### Commits
+
+Los `commits` son la parte esencial `git`. Estos corresponden a **registros** de *cambios* que se hacen en una carpeta (repositorio). Generalmente los *cambios* que un repositorio puede tener son: Que se cree un archivo nuevo, que se elimine un archivo ya existente, o que un archivo ya existente sea modificado.
+
+#### Ver y reconocer cambios en el repositorio {-}
 Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta manera.
-![Plot title. ](01.2-Git-uso-básico_insertimage_2.png)
-con un signo
-<span style="color:green" class="boxed">**[+]**</span>
-veremos los 
-<span style="color:gold" class="boxed">**[•]**</span>
-=======
 ![Plot title. ](01.2-Git-uso-básico_insertimage_3.png)
 <p> El signo
 <span style="color:green" class="boxed">**[+]**</span> significa que el archivo es nuevo, mientras que el signo <span style="color:#EEBC1D"  class="boxed">**[•]**</span> significa que el archivo ya existía, pero que ha sido modificado.
 Por último, <span style="color:red">**[–]**</span> indica que un archivo ha sido borrado.</p>
 
-### Crear registro (commit) 
+#### Crear registro (commit) {-}
 
 Para crear un `commit`, seleccionamos en la barra lateral de la izquierda, que cambios queremos registrar. Luego nos vamos a la parte inferior donde tendremos que ponerle un nombre al commit, y opcionalmente una descripción. 
 
@@ -35,3 +33,27 @@ Para finalizar hacemos click en el botón azul <code>Commit to **main** </code>
 En el botón azul, el nombre de la rama ( en este caso <code>**main**</code>), puede cambiar según la rama en que estemos.
 </div>
 </figure>
+
+
+#### Ver historial de cambios {-}
+
+Si nos vamos a la pestaña `history`  veremos un registro de todos los `commits` realizados. En esta lista, el primer `commit` (de arriba hacia abajo) es el `commit` más reciente, y los que siguen hacia abajo son cada vez más antiguos.
+
+![](01.2-Git-uso-básico_insertimage_9.png)
+
+Si hacemos click en alguno de los registros podremos observar los cambios registrados en ese `commit`. Para cada archivo (modificado) veremos en verde las lineas nuevas y en rojo las eliminadas.
+
+### Branches (Ramas)
+
+Las `branches` (ramas) son un una funcionalidad muy util de `git`. Estas nos permiten, entre otras cosas, explorar e intentar cosas nuevas en un proyecto, sin el temor de echar a perder todo lo que ya esta bueno (y funcionando).
+
+Por defecto, siempre se tiene una *rama principal*, que se suele llamar `main` (`master`) y se crea automáticamente cuando se crean los repositorios.
+
+Entonces, una `branch`, en términos simples, es una "copia" del historial de `commits` de la `branch` principal. Es decir, crea un nuevo espacio en donde tenemos el mismo historial de modificaciones, en donde ahora podremos añadir mas (cambios y) `commits`.
+
+<img src="01.2-Git-uso-básico_insertimage_11.svg" width="60%">
+
+#### Crear una rama
+
+![](01.2-Git-uso-básico_insertimage_12.png)
+
