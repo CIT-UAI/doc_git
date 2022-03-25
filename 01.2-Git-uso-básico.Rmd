@@ -8,20 +8,130 @@ Se verán los conceptos de
 * branch
 * push
 
-### Ver cambios en el repositorio
+### Commits
+
+Los `commits` son la parte esencial `git`. Estos corresponden a **registros** de *cambios* que se hacen en una carpeta (repositorio). Generalmente los *cambios* que un repositorio puede tener son: Que se cree un archivo nuevo, que se elimine un archivo ya existente, o que un archivo ya existente sea modificado.
+
+#### Ver y reconocer cambios en el repositorio {-}
 Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta manera.
-![Plot title. ](01.2-Git-uso-básico_insertimage_2.png)
+![Plot title. ](01.2-Git-uso-básico_insertimage_3.png)
 <p> El signo
-<span style="color:green" class="boxed">**[+]**</span> significa que el archivo es nuevo, mientras que el signo <span style="color:#EEBC1D"  class="boxed">**[•]**</span> significa que el archivo ya existía, pero que ha sido modificado.</p>
+<span style="color:green" class="boxed">**[+]**</span> significa que el archivo es nuevo, mientras que el signo <span style="color:#EEBC1D"  class="boxed">**[•]**</span> significa que el archivo ya existía, pero que ha sido modificado.
+Por último, <span style="color:red">**[–]**</span> indica que un archivo ha sido borrado.</p>
+
+#### Crear registro (commit) {-#make_commit}
+Para crear un `commit`, seleccionamos en la barra lateral de la izquierda, que cambios queremos registrar. Luego nos vamos a la parte inferior donde tendremos que ponerle un nombre al commit, y opcionalmente una descripción. 
+
+![](01.2-Git-uso-básico_insertimage_7.png)
 
 
-### Crear registro (commit) 
-
-Para crear un `commit`, seleccionamos en la barra lateral de la izquierda, que cambios queremos registrar. Luego nos vamos a la parte inferior donde tendremos que ponerle un nombre al commit, y opcionalmente una descripción. Para finalizar hacemos click en el botón azul <code>Commit to **main** </code>
+Para finalizar hacemos click en el botón azul <code>Commit to **main** </code>
 
 <figure class=" block-color-gray_background callout">
 <div>
 En el botón azul, el nombre de la rama ( en este caso <code>**main**</code>), puede cambiar según la rama en que estemos.
 </div>
 </figure>
+
+
+#### Ver historial de cambios {-#gd_log}
+
+Si nos vamos a la pestaña `history`  veremos un registro de todos los `commits` realizados. En esta lista, el primer `commit` (de arriba hacia abajo) es el `commit` más reciente, y los que siguen hacia abajo son cada vez más antiguos.
+
+![](01.2-Git-uso-básico_insertimage_9.png)
+
+Si hacemos click en alguno de los registros podremos observar los cambios registrados en ese `commit`. Para cada archivo (modificado), en caso de ser un archivo de texto, veremos en verde las lineas nuevas y en rojo las eliminadas. Por otro lado, por ejemplo, si es una imagen la que ha sido modificada, podremos visualizar como esta era antes y despues. 
+
+### Branches (Ramas)
+
+Las `branches` (ramas) son un una funcionalidad muy util de `git`. Estas nos permiten, entre otras cosas, explorar e intentar cosas nuevas en un proyecto, sin el temor de echar a perder todo lo que ya esta bueno (y funcionando).
+
+Para imaginarnos esto mostraremos unos ejemplos en las siguientes imagenes.
+
+Por defecto, **siempre se tiene una *rama principal***, que se suele llamar `main` (o `master`) y se crea automáticamente cuando se crean los repositorios. De alguna forma, todo lo ya hemos visto ha sido en la rama `main`. 
+
+<p align="center">
+<img src="commit-seq.svg" width="25%">
+</p>
+
+Acá tenemos una representación del historial de `commits`, algo que [ya vimos](#gd_log) en la aplicación Github Desktop. En esta, cada círculo es un `commit` y tiene un orden cronológico de izquierda a derecha. Es decir el primer `commit` que se hizo fue el `a`,  luego se hizo el `b`, y por último el `c`. 
+
+Lo importante es que todos los círculos (`commits`) **tienen el mismo color**, indicando que **pertenecen a la misma rama**. En particular, en este caso estamos representando la rama principal (`main`)
+
+Entonces, ahora, una `branch` (rama) (a partir de la rama principal), en términos simples, es una "copia" de nuestro espacio de trabajo, **manteniendo los `commits` antiguos** de la rama principal, pero permitiendo que los **nuevos `commits` queden aislados**.
+
+<p align="center">
+<img src="01.2-Git-uso-básico_insertimage_11.svg" width="60%">
+</p>
+
+En esta figura, el orden cronológico de los `commits` también es de izquierda a derecha. Sin embargo, podemos observar que hay ramas presentes. Estas tienen un color distinto al de la rama principal (celeste), e indican, por ejemplo, la implementación de pequeñas o grandes características.
+
+Una cosa importante a considerar, es que se hace con las ramas luego de que lo que se ha implementado en estas (solución de algún error, nueva función o característica) está listo. Las ramas, pueden *fusionarse* en un proceso que se llama `merge`, que veremos más adelante. Generalmente la rama principal es la que se *fusiona* obteniendo los cambios de las ramas paralelas, para mantener el desarrollo estable en la rama principal.
+
+Un ejemplo de esto se muestra en la siguiente figura.
+<p align="center">
+<img src="merge.png" width="60%">
+</p>
+
+Sin embargo, en esta figura vemos que si luego de la creación de la rama `Feature`, se han reaalizado un par de commits en ambas rama (`main` y `Feature`), por lo que en este caso el proceso de `merge` tratará de *fusionar* las modificaciónes de ambas ramas. En caso de haber conflictos uno tendrá que resolverlos de forma manual. (No es tan dificil como suena)
+
+#### Crear una rama {-}
+
+1. En la aplicación `Github Desktop` seleccionamos donde dice `Current Branch`
+<p></p>
+![](01.2-Git-uso-básico_insertimage_12.png)
+2. Hacemos click en el botón `New branch`.
+<p></p>
+![](01.2-Git-uso-básico_insertimage_13.png)
+3. Escribimos el nombre que le queremos poner a la rama, y confirmamos haciendo click en el botón azul `Create branch`
+<img src="01.2-Git-uso-básico_insertimage_15.png" width="60%">
+4. Con esto ya tendremos nuestra nueva rama creada, y *estaremos en ella*.
+
+#### Usando la rama {-}
+
+Para *usar* una rama, solo tenemos que fijarnos que donde dice `Current branch` salga el nombre deseado.
+
+<img src="01.2-Git-uso-básico_insertimage_17.png" width="40%">
+
+Sino es el caso, debemos [cambiar de rama](#change_branch), y luego solo queda hacer cambios y `commits`, tal como [vimos antes](#make_commit)
+
+#### Cambiar de rama {-#change_branch}
+1. En la aplicación `Github Desktop` seleccionamos donde dice `Current Branch`
+![](01.2-Git-uso-básico_insertimage_12.png)
+
+2. Aparecerá una lisa con todas las ramas creadas. Seleccionamos la que queremos usar
+![Plot title. ](01.2-Git-uso-básico_insertimage_16.png)
+
+#### Ejemplo {-}
+
+En esta subsección veremos de forma sencilla una utilidad práctica de usar ramas
+
+Siguiendo la línea de lo mostrado anteriormente, haremos modificaciones y commits en la rama `new_branch`. Luego la compararemos con la rama 
+principal.
+
+![](01.2-Git-uso-básico_insertimage_18.png)
+
+Hemos creado 2 `commit` nuevos. En uno creamos un archivo nuevo, y en el otro modificamos ese archivo.
+
+Pero si nos cambiamos a la rama principal ('main'), veremos que esos commits no existen.
+
+![](01.2-Git-uso-básico_insertimage_19.png)
+
+De forma más visual aún, si seleccionamos la rama `new_branch` en GitHub Desktop, y nos vamos a un explorador veremos los archivos del repositorio, incluyendo el archivo nuevo (`nuevas_caracteristicas.txt`). 
+
+<img src="01.2-Git-uso-básico_insertimage_20.png" width="40%">
+
+Pero si seleccionamos la rama `main` (en GitHub Desktop), ahora en el visor de archivos el nuevo archivo ya no aparece. 
+
+<img src="01.2-Git-uso-básico_insertimage_21.png" width="40%">
+
+
+Esto último ocurre no solo con la creación de archivos, sino que todos los archivos *vuelven* a como estaban en la rama principal.
+
+
+
+
+
+
+
 
