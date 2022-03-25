@@ -35,23 +35,44 @@ En el botón azul, el nombre de la rama ( en este caso <code>**main**</code>), p
 </figure>
 
 
-#### Ver historial de cambios {-}
+#### Ver historial de cambios {-#gd_log}
 
 Si nos vamos a la pestaña `history`  veremos un registro de todos los `commits` realizados. En esta lista, el primer `commit` (de arriba hacia abajo) es el `commit` más reciente, y los que siguen hacia abajo son cada vez más antiguos.
 
 ![](01.2-Git-uso-básico_insertimage_9.png)
 
-Si hacemos click en alguno de los registros podremos observar los cambios registrados en ese `commit`. Para cada archivo (modificado) veremos en verde las lineas nuevas y en rojo las eliminadas.
+Si hacemos click en alguno de los registros podremos observar los cambios registrados en ese `commit`. Para cada archivo (modificado), en caso de ser un archivo de texto, veremos en verde las lineas nuevas y en rojo las eliminadas. Por otro lado, por ejemplo, si es una imagen la que ha sido modificada, podremos visualizar como esta era antes y despues. 
 
 ### Branches (Ramas)
 
 Las `branches` (ramas) son un una funcionalidad muy util de `git`. Estas nos permiten, entre otras cosas, explorar e intentar cosas nuevas en un proyecto, sin el temor de echar a perder todo lo que ya esta bueno (y funcionando).
 
-Por defecto, siempre se tiene una *rama principal*, que se suele llamar `main` (`master`) y se crea automáticamente cuando se crean los repositorios.
+Para imaginarnos esto mostraremos unos ejemplos en las siguientes imagenes.
 
-Entonces, una `branch`, en términos simples, es una "copia" del historial de `commits` de la `branch` principal. Es decir, crea un nuevo espacio en donde tenemos el mismo historial de modificaciones, en donde ahora podremos añadir mas (cambios y) `commits`.
+Por defecto, **siempre se tiene una *rama principal***, que se suele llamar `main` (o `master`) y se crea automáticamente cuando se crean los repositorios. De alguna forma, todo lo ya hemos visto ha sido en la rama `main`. 
 
+<p align="center">
+<img src="commit-seq.svg" width="25%">
+</p>
+
+Acá tenemos una representación del historial de `commits`, algo que [ya vimos](#gd_log) en la aplicación Github Desktop. En esta cada círculo es un `commit` y tiene un orden cronológico de izquierda a derecha. Es decir el primer `commit` que se hizo fue el `a`,  luego se hizo el `b`, y por último el `c`. 
+
+Lo importante es que todos los círculos (`commits`) **tienen el mismo color**, indicando que **pertenecen a la misma rama**. En particular en este caso estamos representando la rama principal (`main`)
+
+Entonces, ahora, una `branch` (rama) (a partir de la rama principal), en términos simples, es una "copia" de nuestro espacio de trabajo, **manteniendo los `commits` antiguos** de la rama principal, pero permitiendo que los **nuevos `commits` queden aislados**.
+
+<p align="center">
 <img src="01.2-Git-uso-básico_insertimage_11.svg" width="60%">
+</p>
+
+En esta figura, el orden cronológico de los `commits` también es de izquierda a derecha. Sin embargo, podemos observar que hay ramas presentes. Estas tienen un color distinto al de la rama principal (celeste), e indican, por ejemplo, la implementación de pequeñas o grandes características.
+
+Una cosa importante a considerar, es que se hace con las ramas luego de que lo que se ha implementado en estas (solución de algún error, nueva función o característica) está listo. Las ramas, pueden *fusionarse* en un proceso que se llama `merge`, que veremos más adelante. Generalmente la rama principal es la que se *"fusiona"* obteniendo los cambios de las ramas paralelas, para luego seguir el desarrollo en la rama principal.
+
+Un ejemplo de esto se muestra en la siguiente figura.
+<p align="center">
+<img src="merge.png" width="60%">
+</p>
 
 #### Crear una rama
 

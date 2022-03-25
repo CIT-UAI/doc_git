@@ -1,9 +1,9 @@
 bookdown::gitbook:
   css: style.css
-  split_by: section
+  split_by: section+number
   config:
     toc:
-      collapse: section
+      collapse: subsection
       before: |
         <li><a href="./">Documentación CIT</a></li>
       after: |
