@@ -19,8 +19,7 @@ Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta man
 <span style="color:green" class="boxed">**[+]**</span> significa que el archivo es nuevo, mientras que el signo <span style="color:#EEBC1D"  class="boxed">**[•]**</span> significa que el archivo ya existía, pero que ha sido modificado.
 Por último, <span style="color:red">**[–]**</span> indica que un archivo ha sido borrado.</p>
 
-#### Crear registro (commit) {-}
-
+#### Crear registro (commit) {-#make_commit}
 Para crear un `commit`, seleccionamos en la barra lateral de la izquierda, que cambios queremos registrar. Luego nos vamos a la parte inferior donde tendremos que ponerle un nombre al commit, y opcionalmente una descripción. 
 
 ![](01.2-Git-uso-básico_insertimage_7.png)
@@ -55,9 +54,9 @@ Por defecto, **siempre se tiene una *rama principal***, que se suele llamar `mai
 <img src="commit-seq.svg" width="25%">
 </p>
 
-Acá tenemos una representación del historial de `commits`, algo que [ya vimos](#gd_log) en la aplicación Github Desktop. En esta cada círculo es un `commit` y tiene un orden cronológico de izquierda a derecha. Es decir el primer `commit` que se hizo fue el `a`,  luego se hizo el `b`, y por último el `c`. 
+Acá tenemos una representación del historial de `commits`, algo que [ya vimos](#gd_log) en la aplicación Github Desktop. En esta, cada círculo es un `commit` y tiene un orden cronológico de izquierda a derecha. Es decir el primer `commit` que se hizo fue el `a`,  luego se hizo el `b`, y por último el `c`. 
 
-Lo importante es que todos los círculos (`commits`) **tienen el mismo color**, indicando que **pertenecen a la misma rama**. En particular en este caso estamos representando la rama principal (`main`)
+Lo importante es que todos los círculos (`commits`) **tienen el mismo color**, indicando que **pertenecen a la misma rama**. En particular, en este caso estamos representando la rama principal (`main`)
 
 Entonces, ahora, una `branch` (rama) (a partir de la rama principal), en términos simples, es una "copia" de nuestro espacio de trabajo, **manteniendo los `commits` antiguos** de la rama principal, pero permitiendo que los **nuevos `commits` queden aislados**.
 
@@ -67,14 +66,72 @@ Entonces, ahora, una `branch` (rama) (a partir de la rama principal), en términ
 
 En esta figura, el orden cronológico de los `commits` también es de izquierda a derecha. Sin embargo, podemos observar que hay ramas presentes. Estas tienen un color distinto al de la rama principal (celeste), e indican, por ejemplo, la implementación de pequeñas o grandes características.
 
-Una cosa importante a considerar, es que se hace con las ramas luego de que lo que se ha implementado en estas (solución de algún error, nueva función o característica) está listo. Las ramas, pueden *fusionarse* en un proceso que se llama `merge`, que veremos más adelante. Generalmente la rama principal es la que se *"fusiona"* obteniendo los cambios de las ramas paralelas, para luego seguir el desarrollo en la rama principal.
+Una cosa importante a considerar, es que se hace con las ramas luego de que lo que se ha implementado en estas (solución de algún error, nueva función o característica) está listo. Las ramas, pueden *fusionarse* en un proceso que se llama `merge`, que veremos más adelante. Generalmente la rama principal es la que se *fusiona* obteniendo los cambios de las ramas paralelas, para mantener el desarrollo estable en la rama principal.
 
 Un ejemplo de esto se muestra en la siguiente figura.
 <p align="center">
 <img src="merge.png" width="60%">
 </p>
 
-#### Crear una rama
+Sin embargo, en esta figura vemos que si luego de la creación de la rama `Feature`, se han reaalizado un par de commits en ambas rama (`main` y `Feature`), por lo que en este caso el proceso de `merge` tratará de *fusionar* las modificaciónes de ambas ramas. En caso de haber conflictos uno tendrá que resolverlos de forma manual. (No es tan dificil como suena)
 
+#### Crear una rama {-}
+
+1. En la aplicación `Github Desktop` seleccionamos donde dice `Current Branch`
+<p></p>
 ![](01.2-Git-uso-básico_insertimage_12.png)
+2. Hacemos click en el botón `New branch`.
+<p></p>
+![](01.2-Git-uso-básico_insertimage_13.png)
+3. Escribimos el nombre que le queremos poner a la rama, y confirmamos haciendo click en el botón azul `Create branch`
+<img src="01.2-Git-uso-básico_insertimage_15.png" width="60%">
+4. Con esto ya tendremos nuestra nueva rama creada, y *estaremos en ella*.
+
+#### Usando la rama {-}
+
+Para *usar* una rama, solo tenemos que fijarnos que donde dice `Current branch` salga el nombre deseado.
+
+<img src="01.2-Git-uso-básico_insertimage_17.png" width="40%">
+
+Sino es el caso, debemos [cambiar de rama](#change_branch), y luego solo queda hacer cambios y `commits`, tal como [vimos antes](#make_commit)
+
+#### Cambiar de rama {-#change_branch}
+1. En la aplicación `Github Desktop` seleccionamos donde dice `Current Branch`
+![](01.2-Git-uso-básico_insertimage_12.png)
+
+2. Aparecerá una lisa con todas las ramas creadas. Seleccionamos la que queremos usar
+![Plot title. ](01.2-Git-uso-básico_insertimage_16.png)
+
+#### Ejemplo {-}
+
+En esta subsección veremos de forma sencilla una utilidad práctica de usar ramas
+
+Siguiendo la línea de lo mostrado anteriormente, haremos modificaciones y commits en la rama `new_branch`. Luego la compararemos con la rama 
+principal.
+
+![](01.2-Git-uso-básico_insertimage_18.png)
+
+Hemos creado 2 `commit` nuevos. En uno creamos un archivo nuevo, y en el otro modificamos ese archivo.
+
+Pero si nos cambiamos a la rama principal ('main'), veremos que esos commits no existen.
+
+![](01.2-Git-uso-básico_insertimage_19.png)
+
+De forma más visual aún, si seleccionamos la rama `new_branch` en GitHub Desktop, y nos vamos a un explorador veremos los archivos del repositorio, incluyendo el archivo nuevo (`nuevas_caracteristicas.txt`). 
+
+<img src="01.2-Git-uso-básico_insertimage_20.png" width="40%">
+
+Pero si seleccionamos la rama `main` (en GitHub Desktop), ahora en el visor de archivos el nuevo archivo ya no aparece. 
+
+<img src="01.2-Git-uso-básico_insertimage_21.png" width="40%">
+
+
+Esto último ocurre no solo con la creación de archivos, sino que todos los archivos *vuelven* a como estaban en la rama principal.
+
+
+
+
+
+
+
 
