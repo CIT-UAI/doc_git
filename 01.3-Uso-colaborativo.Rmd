@@ -1,0 +1,18 @@
+## Uso Colaborativo
+
+En esta sección veremos prácticas recomendadas para el trabajo colaborativo, usando GitHub
+
+### Forks {#forks}
+
+Anteriormente ya vimos como crear `forks`, pero es importante resaltar su utilidad. 
+
+Estos nos permiten tener una *"copia"* individual de un repositorio, en el cual podemos desarrollar partes del proyecto con cierta libertad. Todo esto, con el fin posterior de **proponer**, lo que hayamos desarrollado, al repositorio original.
+
+<img src="01-Git_GitHub_insertimage_1.png" width="90%">
+
+En esta figura vemos la estructura recomendada para el flujo de trabajo. Para un proyecto, el repositorio principal se ubicará en el perfil de la organización (CIT-UAI), mientras que cada desarrollador tendrá su propio `fork`.
+
+Se recomienda en el `fork` usar ramas. Por ejemplo si se desea implementar una nueva característica, llamar la rama con un nombre acorde a lo que se planea desarrollar (ej: `new_functions`). Luego, trabajar en ella y registrar varios `commits` con los avances, para luego, *proponer* los `commits` al repositorio principal (el de la organización) con una `pull request`.
+
+
+
