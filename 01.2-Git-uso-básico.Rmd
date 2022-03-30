@@ -144,15 +144,22 @@ Es aquí donde los conceptos de `pull` y `push` entran en acción.
 
 `push` hace la operación inversa. Lleva nuestros cambios (`commits`) locales al repositorio remoto.
 
-#### Pull en GitHub Desktop
+#### Push en GitHub Desktop {-}
 
-En la aplicación, antes de hacer `pull` nos pedirá antes hacer un `fetch`. En terminos simples y simplificados, la acción `fetch` verificará si en el repositorio remoto hay o no cambios. En caso de haber cambios, nos mostrará entonces la opción de hacer `pull`. 
+Cada vez que hacemos un `commit`, estos en el historial aparecerán con una flecha hacia arriba, indicando que ese `commit` es local y dando la opción de *subirlo* al repositorio remoto. Para hacerlo hacemos click en `Push origin`
+
+<img src="01.2-Git-uso-básico_insertimage_24.png" width="90%">
+
+#### Pull en GitHub Desktop {-}
+
+En la aplicación, antes de hacer `pull` nos pedirá antes hacer un `fetch`. En términos simples y simplificados, la acción `fetch` verificará si en el repositorio remoto hay o no cambios. En caso de haber cambios, nos mostrará entonces la opción de hacer `pull`. 
+
+<img src="01.2-Git-uso-básico_insertimage_22.png" width="90%">
 
 Para hacerlo hacemos click en `Fetch origin` y luego en `Pull origin`
 
-#### Push en GitHub Desktop
+<img src="01.2-Git-uso-básico_insertimage_23.png" width="90%">
 
-Cada vez que hacemos un `commit`, estos en el historial aparecerán con una flecha hacia arriba, indicando que ese `commit` es local y dando la opción de *subirlo* al repositorio remoto. Para hacerlo hacemos click en `Push to origin`
 
 
 
