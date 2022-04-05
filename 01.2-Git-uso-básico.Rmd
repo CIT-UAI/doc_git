@@ -1,4 +1,4 @@
-## Uso Básico
+## Uso Básico {#basic_use}
 
 En esta sección veremos el uso basico de `Git` usando la aplicación `GitHub Desktop`. Se asumirá que ya tienes un repositorio clonado de manera local en tu computador ([Ver sección anterior](#repos_config) )
 
@@ -38,7 +38,7 @@ En el botón azul, el nombre de la rama ( en este caso <code>**main**</code>), p
 
 Si nos vamos a la pestaña `history`  veremos un registro de todos los `commits` realizados. En esta lista, el primer `commit` (de arriba hacia abajo) es el `commit` más reciente, y los que siguen hacia abajo son cada vez más antiguos.
 
-![](01.2-Git-uso-básico_insertimage_9.png)
+<img src="01.2-Git-uso-básico_insertimage_9.png" width="70%">
 
 Si hacemos click en alguno de los registros podremos observar los cambios registrados en ese `commit`. Para cada archivo (modificado), en caso de ser un archivo de texto, veremos en verde las lineas nuevas y en rojo las eliminadas. Por otro lado, por ejemplo, si es una imagen la que ha sido modificada, podremos visualizar como esta era antes y despues. 
 
@@ -78,58 +78,87 @@ Sin embargo, en esta figura vemos que si luego de la creación de la rama `Featu
 #### Crear una rama {-}
 
 1. En la aplicación `Github Desktop` seleccionamos donde dice `Current Branch`
-<p></p>
-![](01.2-Git-uso-básico_insertimage_12.png)
+<p>
+</p>
+<img src="01.2-Git-uso-básico_insertimage_12.png" width="80%">
 2. Hacemos click en el botón `New branch`.
 <p></p>
-![](01.2-Git-uso-básico_insertimage_13.png)
+<img src="01.2-Git-uso-básico_insertimage_13.png" width="80%">
 3. Escribimos el nombre que le queremos poner a la rama, y confirmamos haciendo click en el botón azul `Create branch`
-<img src="01.2-Git-uso-básico_insertimage_15.png" width="60%">
+<p>
+</p>
+<p align="center"><img src="01.2-Git-uso-básico_insertimage_15.png" width="40%"></p>
 4. Con esto ya tendremos nuestra nueva rama creada, y *estaremos en ella*.
 
 #### Usando la rama {-}
 
 Para *usar* una rama, solo tenemos que fijarnos que donde dice `Current branch` salga el nombre deseado.
 
-<img src="01.2-Git-uso-básico_insertimage_17.png" width="40%">
+<p align="center"><img src="01.2-Git-uso-básico_insertimage_17.png" width="30%"></p>
 
 Sino es el caso, debemos [cambiar de rama](#change_branch), y luego solo queda hacer cambios y `commits`, tal como [vimos antes](#make_commit)
 
 #### Cambiar de rama {-#change_branch}
 1. En la aplicación `Github Desktop` seleccionamos donde dice `Current Branch`
-![](01.2-Git-uso-básico_insertimage_12.png)
+<p></p>
+<img src="01.2-Git-uso-básico_insertimage_12.png" width="80%">
 
 2. Aparecerá una lisa con todas las ramas creadas. Seleccionamos la que queremos usar
-![Plot title. ](01.2-Git-uso-básico_insertimage_16.png)
+<p></p>
+<img src="01.2-Git-uso-básico_insertimage_16.png" width="80%">
 
 #### Ejemplo {-}
-
 En esta subsección veremos de forma sencilla una utilidad práctica de usar ramas
 
 Siguiendo la línea de lo mostrado anteriormente, haremos modificaciones y commits en la rama `new_branch`. Luego la compararemos con la rama 
 principal.
 
-![](01.2-Git-uso-básico_insertimage_18.png)
-
-Hemos creado 2 `commit` nuevos. En uno creamos un archivo nuevo, y en el otro modificamos ese archivo.
+<img src="01.2-Git-uso-básico_insertimage_18.png" width="80%">
+<p>Hemos creado 2 `commit` nuevos. En uno creamos un archivo nuevo, y en el otro modificamos ese archivo.</p>
 
 Pero si nos cambiamos a la rama principal ('main'), veremos que esos commits no existen.
 
-![](01.2-Git-uso-básico_insertimage_19.png)
+<img src="01.2-Git-uso-básico_insertimage_19.png" width="80%">
 
 De forma más visual aún, si seleccionamos la rama `new_branch` en GitHub Desktop, y nos vamos a un explorador veremos los archivos del repositorio, incluyendo el archivo nuevo (`nuevas_caracteristicas.txt`). 
 
-<img src="01.2-Git-uso-básico_insertimage_20.png" width="40%">
+<img src="01.2-Git-uso-básico_insertimage_20.png" width="20%">
 
 Pero si seleccionamos la rama `main` (en GitHub Desktop), ahora en el visor de archivos el nuevo archivo ya no aparece. 
 
-<img src="01.2-Git-uso-básico_insertimage_21.png" width="40%">
+<img src="01.2-Git-uso-básico_insertimage_21.png" width="20%">
 
 
 Esto último ocurre no solo con la creación de archivos, sino que todos los archivos *vuelven* a como estaban en la rama principal.
 
+### Pull y Push
 
+De alguna manera, todos los ejemplos mostrados hasta ahora ([en esta sección](#basic_use)) han sido de forma local. Sin embargo, en algún momento necesitaremos sincronizar los repositorios locales con los remotos (GitHub). Esto es de alta utilidad, pues nos permitirá:
+- Tener un respaldo de nuestros códigos (y otros archivos) en la *"nube"*, 
+- Trabajar en distintos computadores con un flujo ordenado.
+- Desarrollar código entre varias personas de forma eficiente y ordenada. 
 
+Es aquí donde los conceptos de `pull` y `push` entran en acción.
+
+`pull` nos permitirá actualizar nuestro repositorio local en caso de haber cambios (`commits`) en el repositorio remoto.
+
+`push` hace la operación inversa. Lleva nuestros cambios (`commits`) locales al repositorio remoto.
+
+#### Push en GitHub Desktop {-}
+
+Cada vez que hacemos un `commit`, estos en el historial aparecerán con una flecha hacia arriba, indicando que ese `commit` es local y dando la opción de *subirlo* al repositorio remoto. Para hacerlo hacemos click en `Push origin`
+
+<img src="01.2-Git-uso-básico_insertimage_24.png" width="90%">
+
+#### Pull en GitHub Desktop {-}
+
+En la aplicación, antes de hacer `pull` nos pedirá antes hacer un `fetch`. En términos simples y simplificados, la acción `fetch` verificará si en el repositorio remoto hay o no cambios. En caso de haber cambios, nos mostrará entonces la opción de hacer `pull`. 
+
+<img src="01.2-Git-uso-básico_insertimage_22.png" width="90%">
+
+Para hacerlo hacemos click en `Fetch origin` y luego en `Pull origin`
+
+<img src="01.2-Git-uso-básico_insertimage_23.png" width="90%">
 
 
 

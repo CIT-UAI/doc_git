@@ -8,6 +8,8 @@ editor_options:
 
 ## Configuración de repositorios {#repos_config}
 
+![](01-Git_GitHub_insertimage_1.png)
+
 ### Crear repositorio
 
 Podemos hacer repositorio de dos formas distintas.
@@ -56,3 +58,96 @@ Si en el menú nos vamos a `Repository > View on GitHub` , veremos
 ![](01-Git_GitHub/Untitled%208.png) 
 Ahora estamos listos para [hacer un Fork](#crear_fork)
 </details>
+### Crear un Fork {#crear_fork}
+
+1. Nos vamos a la página de GitHub del repositorio al que queremos hacerle el `Fork` . Hacemos click en el botón que dice `Fork` en la esquina superior derecha.
+![](01-Git_GitHub/Untitled%209.png)
+
+2. Seleccionamos nuestra cuenta de GitHub
+<div></div>
+![](01-Git_GitHub/Untitled%2010.png)
+
+
+3. Ahora, en la parte superior izquierda vemos que el repositorio ahora se encuentra en nuestro perfil, y que es un fork del repositorio del mismo nombre, pero del perfil `CIT-UAI`
+![](01-Git_GitHub/Untitled%2011.png)
+Ya tenemos el Fork creado, y ya podemos [clonarlo](#clonar_fork)
+### Clonar Fork {#clonar_fork}
+
+1. Con un Fork ya creado, en la aplicación GitHub Desktop, en el menú, nos iremos a `File > Clone repository...`
+![](01-Git_GitHub/Untitled%2012.png)
+
+2. En el menú que se nos abre, refrescamos la lista de repositorios
+<div></div>
+![](01-Git_GitHub/Untitled%2013.png)
+
+3. Vemos como aparece el repositorio al que le hicimos `Fork`
+<div></div>
+![](01-Git_GitHub/Untitled%2014.png)
+4. Lo seleccionamos y le damos click a `Clone`.
+<figure class="block-color-gray_background callout" style="display:flex">
+<div style="font-size:1.5em"><span>️
+<svg width="30px" style="margin-top:-24px"><image xlink:href="https://super.so/icon/dark/alert-triangle.svg"/></svg>
+</span></div>
+<div style="width:100%">
+Es posible que de un problema con la carpeta de destino. Esto ocurrirá **si anteriormente se creó el repositorio para el perfil de la organización** (el repositorio del perfil UAI-CIT) **desde el mismo computador que estás ocupando ahora**.
+![](01-Git_GitHub/Untitled%2015.png)
+<p>Esto lo podemos solucionar de dos formas sencillas</p>
+<details><summary><strong>Solución 1</strong></summary>
+<ul style="list-style-type:none">
+<li>
+<p>La primera forma es corrigiendo el nombre de la carpeta de destino. Sugerimos añadir `_fork` al nombre de la carpeta de destino.</p>
+![](01-Git_GitHub/Untitled%2016.png)
+<p>Con esto la franja mostrando el error desaparece, y podemos hacer click en `Clone` sin problemas, y podemos [continuar](#terminar_fork).</p>
+<details><summary><em>Observación</em></summary>
+<ul style="list-style-type:none"><li>
+[Luego de terminar de clonar el Fork](#terminar_fork) en la lista de repositorios veremos los repositorios que se llaman igual, pero indicando a que perfil de GitHub es cada uno.
+![](01-Git_GitHub/Untitled%2017.png)
+Por otro lado en el visor de archivos veremos dos carpetas
+![](01-Git_GitHub/Untitled%2018.png)
+<p>Acá <code>repositorio1</code> es la copia local del repositorio del perfil CIT-UAI, mientras que <code>repositorio1_fork</code> es la copia local del repositorio del perfil personal.</p>
+</li></ul>
+</details>
+</li></ul>
+<p id="227564d5-356d-4478-8e4e-f5a126448533" class=""></p>
+</details>
+<details>
+<summary><strong>Solución 2 (recomendada)</strong></summary>
+<ul style="list-style-type:none"><li>
+<p>La segunda solución es, antes de hacer el fork, eliminar la copia local del repositorio que creamos para la organización.</p>
+<p>Para esto, en el menú, nos vamos a `View > Repository list` . Hacemos click derecho en el repositorio que vamos a borrar. En este ejemplo el repositorio es `repositorio1` y está bajo el nombre de la organización `cit-uai`</p>
+![](01-Git_GitHub/Untitled%2019.png)
+<p>Hacemos click `Remove...`</p>
+![](01-Git_GitHub/Untitled%2020.png)
+<p>Marcamos la opción `Also move this repository to Recycle Bin` y confirmamos haciendo click en el botón `Remove`</p>
+<p>Es importante precisar que esto **NO borra el repositorio en GitHub**, sino que solo **borra la copia local** de este.</p>
+<p>Ahora podemos repetir los pasos anteriores ([desde el 1 en adelante](#clonar_fork))</p>
+<details><summary><em>Observación</em></summary>
+<ul style="list-style-type:none"><li>
+<p>[Luego de terminar de clonar el Fork](#terminar_fork), en la lista de repositorios veremos solo un repositorio (con el nombre del repositorio al que le hicimos el Fork) indicando pertenece a nuestro perfil personal de GitHub.</p>
+![](01-Git_GitHub/Untitled%2021.png)
+<p>De forma similar, en el visor de archivos solo veremos una carpeta (con el nombre del repositorio al que le hicimos el Fork)</p>
+![](01-Git_GitHub/Untitled%2022.png)
+</li></ul>
+</details>
+</li></ul>
+</details>
+</div>
+</figure>
+<a name="terminar_fork"> </a>
+
+5. Nos aparecerá la siguiente ventana, donde podemos escoger entre dos opciones.
+<div></div>
+![](01-Git_GitHub/Untitled%2023.png)
+<p>La opción `To contribute to the parent project` es ideal si el
+repositorio tiene (o tendrá) códigos que tú y tu equipo van a
+**desarrollar**.</p>
+<p>***Ejemplo***</p>
+<blockquote>Tu y tu equipo van a **desarrollar distintos códigos para el cálculo de algún indicador**. En este repositorio aún se están probando **mejoras** al cálculo, **optimizaciones**, o **características**.</blockquote>
+Por otro lado, la opción `For my own purposes` es ideal para **solo usar el código** (posiblemente desarrollado por otro equipo), al que le harás **pocas modificaciones**, solo para usarlo.
+<p>***Ejemplo***</p>
+<blockquote>Tú y tu equipo solo quieren **correr el cálculo de algún indicador**, para alguna región en particular, por ejemplo, con la **última version estable del código** del cálculo (posiblemente desarrollada por otro equipo). En un principio, solo pretenden hacer **pequeñas modificaciones** en el código solo para usarlo, como por ejemplo **ajustar las rutas de los insumos** que van a  utilizar.</blockquote>
+<figure class="block-color-gray_background callout" style="display:flex">
+<div style="width:100%">Es importante mencionar que, sea cual sea la opción que escojamos, esta **si se puede cambiar después**, en la configuración del repositorio.</div></figure>
+<p>Escogemos la opción más adecuada y hacemos click en `Continue`</p>
+
+6. Con esto ya tenemos nuestro nuestro `Fork` del repositorio listo para usarlo.
