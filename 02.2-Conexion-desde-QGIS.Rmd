@@ -17,9 +17,9 @@ Para comenzar vamos a QGIS y seguimos los siguientes pasos, los cuales solo debe
 
 ![](02.2/01.png)
 
-1. En el panel de herramientas izquierdo hacemos clic en el icono de PostgreSQL
+1. En el panel de herramientas izquierdo hacemos click en el icono de PostgreSQL
 
-2. Hacemos clic en "Nueva" para crear una conección a una base de datos de un servidor
+2. Hacemos click en "Nueva" para crear una conección a una base de datos de un servidor
 
 #### Ingresar datos del servidor
 
@@ -29,7 +29,19 @@ Debemos indicar dónde se encuentra el servidor, estos datos tenemos que tenerlo
 
 El único punto que debemos tener consideración es en el Modo SSL.
 
-¿Qué es el modo SSL? Es una forma de hablar con el servidor, sin embargo con esta opción activa (seleccionando "require" en la lista desplegable) toda la comunicación será encriptada, sólo quien se conecte y el servidor sabrá que están haciendo, es el ideal para comunicarse, sin embargo este método tiene un precio para todo lo que realicemos en QGIS, un precio en tiempo, tiempo extra que los PCs tendrán que encriptar y desencriptar toda la información, y hará más lento todo lo que realizamos, debido a eso están las siguientes consideraciones.
+##### SSL y Seguridad de la información
+
+¿Qué es el modo SSL? Antes de entrar en el SSL, vamos a ver como funciona el internet sin SSL, ya que no todas las páginas lo usan.
+
+![](02.2/without_ssl.png)
+
+Cuando nos comunicamos con un servidor o cualquier otro dispositivo de internet o alguna red, todo lo que hacemos, escribimos, posteamos, todo se envía al internet, y como vemos todos los datos están expuestos, debido a eso, para cuando se usan datos sensibles como la clave de una cuenta bancaria, se usa una conexion llamada SSL.
+
+![](02.2/with_ssl.png)
+
+El modo SSL, "encripta" datos, los transforma en algo que al leerlos no se sabrá que dice, y luego se los envía al destino, para finalmente este pueda "desencriptarlo" y recuperar el mensaje original, el "cómo" es este proceso no se detallará, ya que existen múltiples algoritmos mezclados con tecnología y matemática con tal de asegurar lo más posible que los datos no puedan ser recuperados excepto por el emisor y receptor del mensaje.
+
+Este modo es ideal cuando trabajamos con datos sensibles, sin embargo, por más seguro que sea, tiene un precio, tiempo y poder computacional con tal de "encriptar" y "desencriptar", y mientras con más datos trabajemos, mas lento sera este proceso, debido a ello únicamente en algunas circunstancias es posible trabajar con datos sensibles sin SSL.
 
 Si estamos trabajando desde la red del trabajo, osea tenemos el servidor de PostgreSQL al lado nuestro, o estamos usando algún servicio como VPN o red privada, si tenemos alguna opción que da seguridad a nuestra red y conexión, podemos evitar usar el modo SSL.
 
@@ -42,7 +54,9 @@ En esencia, sin SSL cualquiera con conocimientos de TI podrá leer todo lo que h
 * Posible alteración de la información enviada o recibida al/del servidor
 * Posible hackeo al servidor
 
-"Esto me da miedo, ¿como no me han robado antes datos? por ejemplo mis cuentas de mail" Es por que en el internet, SSL es un estándar, en este tiempo al menos toda página que tenga datos sensibles usará SSL por defecto, incluso páginas que tampoco tienen datos sensibles lo usan, de esa manera te puedes conectar de forma segura incluso en lugares públicos.
+"Esto me da miedo, nunca me he preocupado por usar SSL, no sabía que existía y he entrado al banco y mail ¿como no me han robado antes mis datos?"
+
+Es por que en el internet, SSL hoy en día es un estándar, en este tiempo al menos toda página que tenga datos sensibles usará SSL por defecto, incluso páginas que tampoco tienen datos sensibles lo usan, de esa manera te puedes conectar de forma segura incluso en lugares públicos.
 
 Cuando entras a una página web puedes ver lo siguiente.
 
@@ -96,12 +110,16 @@ Con esto, hemos guardado la conexión y podemos acceder al servidor y su base de
 
 ### Cargar mapas desde PostGIS
 
-Cargar mapas es bastante simple, muy similar a un archivo una vez que realizamos los procedimientos previos, primero:
+Cargar mapas es bastante simple, muy similar a un archivo una vez que realizamos los procedimientos previos.
+
+#### Conectarse al servidor
 
 ![](02.2/06.png)
 
 1. Seleccionamos la conexión, tendrá el nombre que elegimos en la sección anterior.
 2. Seleccionamos "Conectar", si no guardamos el usuario y/o clave del servidor, las volverá a solicitar.
+
+#### Seleccionar y añadir Mapas
 
 ![](02.2/07.png)
 
@@ -126,11 +144,15 @@ Es posible seleccionar directamente el esquema "public" o el que desees y añadi
 
 Una vez con todos los mapas cargados hacemos click en "Close" para salir de la interfaz para añadir mapas.
 
+#### Usar mapas de la forma usual
+
 ![](02.2/10.png)
 
 Como vemos en la imagen, todos los mapas han sido cargados y podemos usar QGIS de forma usual.
 
 Si no puedes editar mapas, puede que no tengas credenciales para hacerlo, en todo caso, comunicarse con el área de TI para mayor información.
+
+
 
 
 
