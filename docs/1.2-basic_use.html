@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.2 Uso Básico | Documentación interna CIT</title>
+  <meta name="description" content="Piloto de documentación con Bookdown" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.2 Uso Básico | Documentación interna CIT" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Piloto de documentación con Bookdown" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.2 Uso Básico | Documentación interna CIT" />
+  
+  <meta name="twitter:description" content="Piloto de documentación con Bookdown" />
+  
+
+<meta name="author" content="Equipo de Investigación (?)" />
+
+
+<meta name="date" content="2022-04-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="1.1-repos_config.html"/>
+<link rel="next" href="1.3-uso-colaborativo.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Documentación CIT</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#prefacio">Prefacio<span></span></a></li>
+<li class="chapter" data-level="1" data-path="1-git.html"><a href="1-git.html"><i class="fa fa-check"></i><b>1</b> Git + GitHub<span></span></a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1.1-repos_config.html"><a href="1.1-repos_config.html"><i class="fa fa-check"></i><b>1.1</b> Configuración de repositorios<span></span></a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="1.1-repos_config.html"><a href="1.1-repos_config.html#crear-repositorio"><i class="fa fa-check"></i><b>1.1.1</b> Crear repositorio<span></span></a></li>
+<li class="chapter" data-level="1.1.2" data-path="1.1-repos_config.html"><a href="1.1-repos_config.html#crear_fork"><i class="fa fa-check"></i><b>1.1.2</b> Crear un Fork<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1.2-basic_use.html"><a href="1.2-basic_use.html"><i class="fa fa-check"></i><b>1.2</b> Uso Básico<span></span></a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="1.2-basic_use.html"><a href="1.2-basic_use.html#commits"><i class="fa fa-check"></i><b>1.2.1</b> Commits<span></span></a></li>
+<li class="chapter" data-level="1.2.2" data-path="1.2-basic_use.html"><a href="1.2-basic_use.html#branches-ramas"><i class="fa fa-check"></i><b>1.2.2</b> Branches (Ramas)<span></span></a></li>
+<li class="chapter" data-level="1.2.3" data-path="1.2-basic_use.html"><a href="1.2-basic_use.html#pull-y-push"><i class="fa fa-check"></i><b>1.2.3</b> Pull y Push<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1.3-uso-colaborativo.html"><a href="1.3-uso-colaborativo.html"><i class="fa fa-check"></i><b>1.3</b> Uso Colaborativo<span></span></a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="1.3-uso-colaborativo.html"><a href="1.3-uso-colaborativo.html#forks"><i class="fa fa-check"></i><b>1.3.1</b> Forks<span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-applications.html"><a href="2-applications.html"><i class="fa fa-check"></i><b>2</b> Applications<span></span></a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2.1-example-one.html"><a href="2.1-example-one.html"><i class="fa fa-check"></i><b>2.1</b> Example one<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="2.2-example-two.html"><a href="2.2-example-two.html"><i class="fa fa-check"></i><b>2.2</b> Example two<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-final-words.html"><a href="3-final-words.html"><i class="fa fa-check"></i><b>3</b> Final Words<span></span></a></li>
+<li><a href="references.html#references">References<span></span></a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documentación interna CIT</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basic_use" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Uso Básico<a href="1.2-basic_use.html#basic_use" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta sección veremos el uso basico de <code>Git</code> usando la aplicación <code>GitHub Desktop</code>. Se asumirá que ya tienes un repositorio clonado de manera local en tu computador (<a href="1.1-repos_config.html#repos_config">Ver sección anterior</a> )</p>
+<p>Se verán los conceptos de</p>
+<ul>
+<li>commit</li>
+<li>branch</li>
+<li>push</li>
+</ul>
+<div id="commits" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Commits<a href="1.2-basic_use.html#commits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los <code>commits</code> son la parte esencial <code>git</code>. Estos corresponden a <strong>registros</strong> de <em>cambios</em> que se hacen en una carpeta (repositorio). Generalmente los <em>cambios</em> que un repositorio puede tener son: Que se cree un archivo nuevo, que se elimine un archivo ya existente, o que un archivo ya existente sea modificado.</p>
+<div id="ver-y-reconocer-cambios-en-el-repositorio" class="section level4 unnumbered hasAnchor" number="">
+<h4>Ver y reconocer cambios en el repositorio<a href="1.2-basic_use.html#ver-y-reconocer-cambios-en-el-repositorio" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+Cuando hacemos cambios en un repositorio, GitHub Desktop lo mostrara de esta manera.
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_3.png" alt="Plot title." />
+<p>
+El signo
+<span class="boxed" style="color:green"><strong>[+]</strong></span> significa que el archivo es nuevo, mientras que el signo <span class="boxed" style="color:#EEBC1D"><strong>[•]</strong></span> significa que el archivo ya existía, pero que ha sido modificado.
+Por último, <span style="color:red"><strong>[–]</strong></span> indica que un archivo ha sido borrado.
+</p>
+</div>
+<div id="make_commit" class="section level4 unnumbered hasAnchor" number="">
+<h4>Crear registro (commit)<a href="1.2-basic_use.html#make_commit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para crear un <code>commit</code>, seleccionamos en la barra lateral de la izquierda, que cambios queremos registrar. Luego nos vamos a la parte inferior donde tendremos que ponerle un nombre al commit, y opcionalmente una descripción.</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_7.png" /></p>
+<p>Para finalizar hacemos click en el botón azul <code>Commit to <strong>main</strong> </code></p>
+<figure class=" block-color-gray_background callout">
+<div>
+<p>En el botón azul, el nombre de la rama ( en este caso <code><strong>main</strong></code>), puede cambiar según la rama en que estemos.</p>
+</div>
+</figure>
+</div>
+<div id="gd_log" class="section level4 unnumbered hasAnchor" number="">
+<h4>Ver historial de cambios<a href="1.2-basic_use.html#gd_log" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Si nos vamos a la pestaña <code>history</code> veremos un registro de todos los <code>commits</code> realizados. En esta lista, el primer <code>commit</code> (de arriba hacia abajo) es el <code>commit</code> más reciente, y los que siguen hacia abajo son cada vez más antiguos.</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_9.png" width="70%"></p>
+<p>Si hacemos click en alguno de los registros podremos observar los cambios registrados en ese <code>commit</code>. Para cada archivo (modificado), en caso de ser un archivo de texto, veremos en verde las lineas nuevas y en rojo las eliminadas. Por otro lado, por ejemplo, si es una imagen la que ha sido modificada, podremos visualizar como esta era antes y despues.</p>
+</div>
+</div>
+<div id="branches-ramas" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Branches (Ramas)<a href="1.2-basic_use.html#branches-ramas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Las <code>branches</code> (ramas) son un una funcionalidad muy util de <code>git</code>. Estas nos permiten, entre otras cosas, explorar e intentar cosas nuevas en un proyecto, sin el temor de echar a perder todo lo que ya esta bueno (y funcionando).</p>
+<p>Para imaginarnos esto mostraremos unos ejemplos en las siguientes imagenes.</p>
+<p>Por defecto, <strong>siempre se tiene una <em>rama principal</em></strong>, que se suele llamar <code>main</code> (o <code>master</code>) y se crea automáticamente cuando se crean los repositorios. De alguna forma, todo lo ya hemos visto ha sido en la rama <code>main</code>.</p>
+<p align="center">
+<img src="commit-seq.svg" width="25%">
+</p>
+<p>Acá tenemos una representación del historial de <code>commits</code>, algo que <a href="1.2-basic_use.html#gd_log">ya vimos</a> en la aplicación Github Desktop. En esta, cada círculo es un <code>commit</code> y tiene un orden cronológico de izquierda a derecha. Es decir el primer <code>commit</code> que se hizo fue el <code>a</code>, luego se hizo el <code>b</code>, y por último el <code>c</code>.</p>
+<p>Lo importante es que todos los círculos (<code>commits</code>) <strong>tienen el mismo color</strong>, indicando que <strong>pertenecen a la misma rama</strong>. En particular, en este caso estamos representando la rama principal (<code>main</code>)</p>
+<p>Entonces, ahora, una <code>branch</code> (rama) (a partir de la rama principal), en términos simples, es una “copia” de nuestro espacio de trabajo, <strong>manteniendo los <code>commits</code> antiguos</strong> de la rama principal, pero permitiendo que los <strong>nuevos <code>commits</code> queden aislados</strong>.</p>
+<p align="center">
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_11.svg" width="60%">
+</p>
+<p>En esta figura, el orden cronológico de los <code>commits</code> también es de izquierda a derecha. Sin embargo, podemos observar que hay ramas presentes. Estas tienen un color distinto al de la rama principal (celeste), e indican, por ejemplo, la implementación de pequeñas o grandes características.</p>
+<p>Una cosa importante a considerar, es que se hace con las ramas luego de que lo que se ha implementado en estas (solución de algún error, nueva función o característica) está listo. Las ramas, pueden <em>fusionarse</em> en un proceso que se llama <code>merge</code>, que veremos más adelante. Generalmente la rama principal es la que se <em>fusiona</em> obteniendo los cambios de las ramas paralelas, para mantener el desarrollo estable en la rama principal.</p>
+Un ejemplo de esto se muestra en la siguiente figura.
+<p align="center">
+<img src="merge.png" width="60%">
+</p>
+<p>Sin embargo, en esta figura vemos que si luego de la creación de la rama <code>Feature</code>, se han reaalizado un par de commits en ambas rama (<code>main</code> y <code>Feature</code>), por lo que en este caso el proceso de <code>merge</code> tratará de <em>fusionar</em> las modificaciónes de ambas ramas. En caso de haber conflictos uno tendrá que resolverlos de forma manual. (No es tan dificil como suena)</p>
+<div id="crear-una-rama" class="section level4 unnumbered hasAnchor" number="">
+<h4>Crear una rama<a href="1.2-basic_use.html#crear-una-rama" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>En la aplicación <code>Github Desktop</code> seleccionamos donde dice <code>Current Branch</code>
+<p>
+</p>
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_12.png" width="80%"></li>
+<li>Hacemos click en el botón <code>New branch</code>.
+<p>
+</p>
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_13.png" width="80%"></li>
+<li>Escribimos el nombre que le queremos poner a la rama, y confirmamos haciendo click en el botón azul <code>Create branch</code>
+<p>
+</p>
+<p align="center">
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_15.png" width="40%">
+</p></li>
+<li>Con esto ya tendremos nuestra nueva rama creada, y <em>estaremos en ella</em>.</li>
+</ol>
+</div>
+<div id="usando-la-rama" class="section level4 unnumbered hasAnchor" number="">
+<h4>Usando la rama<a href="1.2-basic_use.html#usando-la-rama" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para <em>usar</em> una rama, solo tenemos que fijarnos que donde dice <code>Current branch</code> salga el nombre deseado.</p>
+<p align="center">
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_17.png" width="30%">
+</p>
+<p>Sino es el caso, debemos <a href="1.2-basic_use.html#change_branch">cambiar de rama</a>, y luego solo queda hacer cambios y <code>commits</code>, tal como <a href="1.2-basic_use.html#make_commit">vimos antes</a></p>
+</div>
+<div id="change_branch" class="section level4 unnumbered hasAnchor" number="">
+<h4>Cambiar de rama<a href="1.2-basic_use.html#change_branch" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p>En la aplicación <code>Github Desktop</code> seleccionamos donde dice <code>Current Branch</code></p>
+<p>
+</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_12.png" width="80%"></p></li>
+<li><p>Aparecerá una lisa con todas las ramas creadas. Seleccionamos la que queremos usar</p>
+<p>
+</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_16.png" width="80%"></p></li>
+</ol>
+</div>
+<div id="ejemplo" class="section level4 unnumbered hasAnchor" number="">
+<h4>Ejemplo<a href="1.2-basic_use.html#ejemplo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En esta subsección veremos de forma sencilla una utilidad práctica de usar ramas</p>
+<p>Siguiendo la línea de lo mostrado anteriormente, haremos modificaciones y commits en la rama <code>new_branch</code>. Luego la compararemos con la rama
+principal.</p>
+<img src="01.2-Git-uso-b%C3%A1sico_insertimage_18.png" width="80%">
+<p>
+Hemos creado 2 <code>commit</code> nuevos. En uno creamos un archivo nuevo, y en el otro modificamos ese archivo.
+</p>
+<p>Pero si nos cambiamos a la rama principal (‘main’), veremos que esos commits no existen.</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_19.png" width="80%"></p>
+<p>De forma más visual aún, si seleccionamos la rama <code>new_branch</code> en GitHub Desktop, y nos vamos a un explorador veremos los archivos del repositorio, incluyendo el archivo nuevo (<code>nuevas_caracteristicas.txt</code>).</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_20.png" width="20%"></p>
+<p>Pero si seleccionamos la rama <code>main</code> (en GitHub Desktop), ahora en el visor de archivos el nuevo archivo ya no aparece.</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_21.png" width="20%"></p>
+<p>Esto último ocurre no solo con la creación de archivos, sino que todos los archivos <em>vuelven</em> a como estaban en la rama principal.</p>
+</div>
+</div>
+<div id="pull-y-push" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Pull y Push<a href="1.2-basic_use.html#pull-y-push" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De alguna manera, todos los ejemplos mostrados hasta ahora (<a href="1.2-basic_use.html#basic_use">en esta sección</a>) han sido de forma local. Sin embargo, en algún momento necesitaremos sincronizar los repositorios locales con los remotos (GitHub). Esto es de alta utilidad, pues nos permitirá:
+- Tener un respaldo de nuestros códigos (y otros archivos) en la <em>“nube”</em>,
+- Trabajar en distintos computadores con un flujo ordenado.
+- Desarrollar código entre varias personas de forma eficiente y ordenada.</p>
+<p>Es aquí donde los conceptos de <code>pull</code> y <code>push</code> entran en acción.</p>
+<p><code>pull</code> nos permitirá actualizar nuestro repositorio local en caso de haber cambios (<code>commits</code>) en el repositorio remoto.</p>
+<p><code>push</code> hace la operación inversa. Lleva nuestros cambios (<code>commits</code>) locales al repositorio remoto.</p>
+<div id="push-en-github-desktop" class="section level4 unnumbered hasAnchor" number="">
+<h4>Push en GitHub Desktop<a href="1.2-basic_use.html#push-en-github-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cada vez que hacemos un <code>commit</code>, estos en el historial aparecerán con una flecha hacia arriba, indicando que ese <code>commit</code> es local y dando la opción de <em>subirlo</em> al repositorio remoto. Para hacerlo hacemos click en <code>Push origin</code></p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_24.png" width="90%"></p>
+</div>
+<div id="pull-en-github-desktop" class="section level4 unnumbered hasAnchor" number="">
+<h4>Pull en GitHub Desktop<a href="1.2-basic_use.html#pull-en-github-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En la aplicación, antes de hacer <code>pull</code> nos pedirá antes hacer un <code>fetch</code>. En términos simples y simplificados, la acción <code>fetch</code> verificará si en el repositorio remoto hay o no cambios. En caso de haber cambios, nos mostrará entonces la opción de hacer <code>pull</code>.</p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_22.png" width="90%"></p>
+<p>Para hacerlo hacemos click en <code>Fetch origin</code> y luego en <code>Pull origin</code></p>
+<p><img src="01.2-Git-uso-b%C3%A1sico_insertimage_23.png" width="90%"></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1.1-repos_config.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="1.3-uso-colaborativo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01.2-Git-uso-básico.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
